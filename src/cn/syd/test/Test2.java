@@ -35,5 +35,44 @@ public class Test2 {
         System.out.println(ll.size());
         ll.remove(1);
         System.out.println(ll.size());
+
+        //集合--不允许重复值存在
+        Set<Integer> s1 = new HashSet<>();
+        s1.add(4);
+        s1.add(5);
+        s1.add(4);
+        s1.add(5);
+        System.out.println(s1);
+        System.out.println(s1.size());
+
+        List<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(5);
+        list.add(2);
+        //循环遍历
+        Iterator  iter= list.iterator();
+        while (iter.hasNext()){
+            System.out.println(iter.next());
+        }
+
+        //字典
+        Map<String,Integer> map = new HashMap<>();
+        map.put("Tom",12);
+        map.put("shuang",13);
+        map.put("dong",28);
+        System.out.println(map.get("shuang"));
+
+
+        Humanity humanity = new Humanity("lily");
+        humanity.drinkWater(0.3);
+
+        Humanity me = new Humanity("Vamei");
+        Humanity him = new Humanity("Jerry");
+        Humanity.Cup1 myFirstCup = me.new Cup1();
+        Humanity.Cup1 himFirstCup = him.new Cup1();
+        System.out.println(myFirstCup.whoCup());
+        System.out.println(himFirstCup.whoCup());
+        me.changeName("newBee");
+        System.out.println(myFirstCup.whoCup());
     }
 }
