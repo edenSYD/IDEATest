@@ -11,7 +11,20 @@ package cn.syd.test;
  */
 public class Human {
 
-    int height;
+    //私有属性
+    private int height;
+
+    private void breath(){
+        System.out.print("hu...hu..." + "\n");
+    }
+    //方法重载
+    public void breath(int rep){
+        int i;
+        for (i = 0;i < rep;i++){
+            //调用内部私有方法
+            this.breath();
+        }
+    }
 
     public int getHeight() {
         return height;
@@ -22,15 +35,9 @@ public class Human {
         this.height = height;
     }
 
-    void breath(){
-        System.out.print("hu...hu..." + "\n");
-    }
-    //方法重载
-    void breath(int rep){
 
-    }
     //this method()  --> 对象的内部方法
-    void growHeight(int h){
+    public void growHeight(int h){
         this.height += h;
     }
     //内部构造器,初始化赋值

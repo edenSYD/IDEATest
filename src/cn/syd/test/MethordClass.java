@@ -11,11 +11,11 @@ package cn.syd.test;
  */
 public class MethordClass {
     public static void main(String[] args){
-       Human human = new Human(150);
-       //调用类的方法
-       human.breath();
-       System.out.print(human.height +"\n");
-       Human human1 = new Human(160,"shit");
-       System.out.print(human1.getHeight());
+
+        Human human1 = new Human(160,"shit");
+        System.out.print(human1.getHeight());
+        human1.growHeight(170);
+        System.out.print("\n" + human1.getHeight());
+        human1.breath(5);
     }
 }

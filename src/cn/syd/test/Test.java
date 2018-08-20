@@ -1,5 +1,7 @@
 package cn.syd.test;
 
+import javafx.scene.control.Tab;
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -15,6 +17,7 @@ import java.util.List;
  * \
  */
 public class Test {
+
     public static void main(String[] args){
         System.out.print("Declare in the middle\n");
         //定义一个变量
@@ -52,10 +55,23 @@ public class Test {
         }
 
         Human human = new Human(160);
-        human.breath();
-        System.out.print(human.getHeight());
+        System.out.print(human.getHeight() + "\n");
+        System.out.println();
+        System.out.println("Test.main");
+        System.out.println("Test.main");
+
         //human.setHeight(170);
         //System.out.print(human.getHeight());
+
+
+        //手电筒练习
+        Torch torch = new Torch();
+        System.out.println("charge 2 hour");
+        torch.charge(2);
+        System.out.println("First turn on: 3 hour");
+        torch.torchOn(3);
+        System.out.println("Second turn on: 3 hour");
+        torch.torchOn(3);
     }
 
     private static void getSum(){
