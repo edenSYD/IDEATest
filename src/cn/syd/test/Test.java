@@ -1,7 +1,9 @@
 package cn.syd.test;
+import java.awt.desktop.ScreenSleepEvent;
+import java.io.*;
 
-import javafx.scene.control.Tab;
-
+import java.io.IOException;
+import java.nio.Buffer;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -72,10 +74,127 @@ public class Test {
         torch.torchOn(3);
         System.out.println("Second turn on: 3 hour");
         torch.torchOn(3);
+
+        Women women = new Women();
+        women.growHeight(160);
+        System.out.println(women.getHeight());
+        System.out.println(women.getPopulation());
+
+        //针对异常处理
+        try {
+            String content = "thank you for your fish";
+            File file = new File("file.txt");
+            //判断文件是否存在
+            if (!file.exists()){
+                file.createNewFile();
+            }
+            FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(content);
+            BufferedReader bf =  new BufferedReader(new FileReader("file.txt"));
+            StringBuilder builder = new StringBuilder();
+            String line = bf.readLine();
+
+            while (line != null){
+                builder.append(line);
+                builder.append("\n");
+                line = bf.readLine();
+            }
+            bf.close();
+        }catch (IOException e){
+            e.printStackTrace();
+            System.out.println("io problem");
+        }finally {
+
+        }
+        Class c1 = human.getClass();
+        System.out.println(c1.getName());
+
+        Human antherPerson = new Women();
+        Class c2 = antherPerson.getClass();
+        System.out.println();
+        System.out.println(c2.getName());
+        System.out.println(c2.getPackage());
+
+
+        //1.创建线程
+        //NewThread thread = new NewThread();
+        //NewThread thread2 = new NewThread();
+        //thread.start();
+        //thread2.start();
+        Reservoir r = new Reservoir(100);
+
+        //资源共享
+        NewThread thread1 = new NewThread(r);
+        NewThread thread2 = new NewThread(r);
+        NewThread thread3 = new NewThread(r);
+
+
     }
 
     private static void getSum(){
 
     }
 
+}
+
+class NewThread extends Thread{
+    private static int threadID = 0;
+    private  Reservoir reservoir;
+    private int count = 0;
+
+    public NewThread(Reservoir r){
+        super("ID" + (++threadID));
+        this.reservoir = r;
+        this.start();
+    }
+    public String tostring(){
+        return super.getName();
+    }
+
+    public NewThread(){
+        super("ID" + (++threadID));
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public void run() {
+        //super.run();
+        while (true){
+            if (this.reservoir.sellTicket()){
+                this.count = this.count + 1;
+                System.out.println(this.getName() + ": sell 1");
+
+                try {
+                    sleep((int)Math.random() * 100);
+                }catch (InterruptedException ex){
+                    System.out.println(ex);
+                }
+            }else {
+                break;
+            }
+        }
+        System.out.println(this.getName() + " I sold" + count);
+    }
+
+}
+
+class Reservoir {
+    private  int total;
+    public Reservoir(int t){
+        this.total = t;
+    }
+
+    public synchronized boolean sellTicket(){
+        if (this.total > 0){
+            this.total = this.total - 1;
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

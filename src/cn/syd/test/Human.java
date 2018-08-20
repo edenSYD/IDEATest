@@ -1,5 +1,5 @@
 package cn.syd.test;
-
+//import cn.syd.test.*;
 /**
  * \* Created with IntelliJ IDEA.
  * \* User: syd
@@ -13,7 +13,22 @@ public class Human {
 
     //私有属性
     private int height;
+    private static int population;
+    private static  boolean is_mammal = true;
 
+    //内部构造器,初始化赋值
+    public Human(int h){
+        this.height = h;
+        Human.population = Human.population + 1;
+        System.out.print("I'm born");
+    }
+    public Human(int h,String s){
+        this.height = h;
+        System.out.print("new zha: I'm born," + s);
+    }
+    public Human(){
+
+    }
     private void breath(){
         System.out.print("hu...hu..." + "\n");
     }
@@ -25,7 +40,6 @@ public class Human {
             this.breath();
         }
     }
-
     public int getHeight() {
         return height;
     }
@@ -35,18 +49,12 @@ public class Human {
         this.height = height;
     }
 
+    public static int getPopulation() {
+        return population;
+    }
 
     //this method()  --> 对象的内部方法
     public void growHeight(int h){
         this.height += h;
-    }
-    //内部构造器,初始化赋值
-    Human(int h){
-        this.height = h;
-        System.out.print("I'm born");
-    }
-    Human(int h,String s){
-        this.height = h;
-        System.out.print("new zha: I'm born," + s);
     }
 }
