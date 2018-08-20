@@ -48,4 +48,11 @@ public class Humanity {
     public void changeName(String n){
         this.name = n;
     }
+
+    //嵌套static类
+    static class Mongolian{
+        public void shout(){
+            System.out.println("oh...oh...");
+        }
+    }
 }

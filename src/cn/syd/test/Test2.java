@@ -74,5 +74,8 @@ public class Test2 {
         System.out.println(himFirstCup.whoCup());
         me.changeName("newBee");
         System.out.println(myFirstCup.whoCup());
+        //嵌套static类
+        Humanity.Mongolian mongolian = new Humanity.Mongolian();
+        mongolian.shout();
     }
 }
