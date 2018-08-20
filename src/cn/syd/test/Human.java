@@ -20,17 +20,17 @@ public class Human {
     public Human(int h){
         this.height = h;
         Human.population = Human.population + 1;
-        System.out.print("I'm born");
+        System.out.println("I'm born");
     }
     public Human(int h,String s){
         this.height = h;
-        System.out.print("new zha: I'm born," + s);
+        System.out.println("new zha: I'm born," + s);
     }
     public Human(){
 
     }
     private void breath(){
-        System.out.print("hu...hu..." + "\n");
+        System.out.println("hu...hu..." + "\n");
     }
     //方法重载
     public void breath(int rep){
