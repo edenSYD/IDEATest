@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPS定位</title>
+    <script>
+        <!--显示结果的区域对象-->
+        var result;
+        window.onload = function() {
+            result = document.getElementById("result");
+        }
+    //    获取位置
+        function getLocation() {
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(
+                    showPosition,handleLocationErroe,
+                    {maximumAge:60000,timeout:5000,enableHeighAccuracy:true}
+                    );
+            }else {
+                result.innerHTML = "该设备不支持GPS定位";
+            }
+        }
+        //获取位置失败
+        function handleLocationErroe(error) {
+            switch (error.code){
+                case 0:
+                    alert("获取位置信息出错!");
+                    break;
+                case 1:
+                    alert("您未开启定位功能");
+                    break;
+                case 2:
+                    alert("浏览器未知位置");
+                    break;
+                case 3:
+                    alert("获取位置超时");
+                    break;
+            }
+        }
+
+        //显示位置
+        function showPosition(position) {
+            result.innerHTML = "经度" + position.coords.latitude +
+                    "<br>纬度:" + position.coords.longitude +
+                    "<br>准确度:" + position.coords.accuracy +
+                    "<br>海拔:" + position.coords.altitude +
+                    "<br>海拔准确度:" + position.coords.altitudeAccuracy +
+                    "<br>时间:" + position.timestamp;
+        }
+    </script>
+</head>
+<body style="font-size: 100px">
+    <button onclick="getLocation()">获取位置</button>
+    <p id="result"></p>
+</body>
+</html>

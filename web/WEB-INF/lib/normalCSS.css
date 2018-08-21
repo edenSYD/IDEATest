@@ -1,0 +1,98 @@
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+body{
+    font-family: "Helvetica","Hiragino Sans GB","Microsoft Yahei", sans-serif;
+    max-width: 700px;
+}
+
+header{
+    background-color: #2ab650;
+    border: thin #336699 solid;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+header h1{
+    margin: 0px;
+    color: white;
+    font-size: xx-large;
+}
+header h2{
+    margin: 0px;
+    font-weight: bold;
+}
+
+header .pig{
+    font-style: italic;
+    font-weight: bold;
+}
+header .Byline{
+    font-style: italic;
+    font-size: small;
+    margin: 0px;
+}
+
+.Content{
+    font-size: medium;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 120%;
+}
+.Content p{
+    margin-top: 0px;
+}
+.Content h2{
+  color: #24486C;
+  margin-bottom: 2px;
+  font-size: medium;
+}
+.Content .LeadIn{
+    font-weight: bold;
+    font-size: large;
+    font-variant: small-caps;
+}
+.Content .Figure{
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.Content .Figure figcaption{
+    max-width: 200px;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.Content .RightFigure{
+    float: right;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.Content .RightFigure figcaption {
+    max-width: 200px;
+    background-color: #2ab650;
+    color: white;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+footer{
+    text-align: center;
+    font-size: x-small;
+}
+
+footer p{
+    margin: 3px;
+}
+footer .Disclaimer{
+    font-style: italic;
+}

@@ -1,5 +1,5 @@
 package cn.syd.test;
-import java.awt.desktop.ScreenSleepEvent;
+import java.awt.*;
 import java.io.*;
 
 import java.io.IOException;
