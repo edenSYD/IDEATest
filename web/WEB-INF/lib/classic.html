@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>相对路径与绝对路径</title>
+
     <script>
        function goBack() {
            window.history.go(-1);
@@ -28,5 +29,17 @@
   <a href="image.html">显示图片</a>
   <a href="table.html">表格</a>
   <a href="Div.html" onclick="self.location=document.referrer">div使用</a>
+  <br>
+  <p id="demo">Javascript能改变  HTML内容</p>
+  <button type="button" onclick="myFunction()">点我!</button>
+  <br><br>
+  <img id="myimage" onclick="changeImage()" src="eg_bulboff.gif">
+  <p>点击灯泡来点亮或熄灭灯</p>
+  <br><br>
+  <p>请按输入提示,如果不是数字，浏览器回弹出提示框</p>
+  <input id="isnumber" type="text">
+  <button type="button" onclick="isNUmber()">判断输入的是否数字</button>
+   <!--引入外部js文件-->
+  <script src="js01.js"></script>
 </body>
 </html>
