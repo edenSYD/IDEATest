@@ -4,6 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>相对路径与绝对路径</title>
+    <script>
+       function goBack() {
+           window.history.go(-1);
+           window.history.back();
+           window.history.forward();
+           window.opener.location.reload();
+           window.opener.location.href = window.opener.location.href;
+           window.parent.location.reload();
+           document.parentWindow.location.reload();
+           window.location.href = "Div.html";
+       }
+    </script>
 </head>
 <body>
   <a href="Ul01.html" target="_blank">相对路径</a>
@@ -14,5 +26,7 @@
   <a href="mingri.html">明日图书</a>
   <a href="download.html">文件下载</a>
   <a href="image.html">显示图片</a>
+  <a href="table.html">表格</a>
+  <a href="Div.html" onclick="self.location=document.referrer">div使用</a>
 </body>
 </html>

@@ -96,3 +96,12 @@ footer p{
 footer .Disclaimer{
     font-style: italic;
 }
+table footer td{
+    size: 15px;
+    color: #ff0000;
+    font-size: large;
+
+}
+body{
+    text-indent: 20px;
+}

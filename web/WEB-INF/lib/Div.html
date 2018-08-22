@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="GBK" http-equiv="content-type" content="text/html">
+    <title>Div标签使用</title>
+    <style type="text/css">
+     *{margin: 0px auto;padding: 0px;font-family: "微软雅黑"}
+     #wa1 {width: 300px;height: 300px;margin-top: 20px;}
+     #sel {width: 200px;height: 30px;border: 1px solid #ff0000;vertical-align: middle;line-height: 30px;padding-left: 10p
+     ;padding-right: 10px;}
+     #sel:hover{cursor: pointer}
+     #items {width: 180px;display: none}
+     .item{width: 160px;height: 30px;border: 1px solid #ff0000;vertical-align: middle;line-height: 30px;padding-left: 10px;padding-right: 10px;border-top: 0px solid #ff0000}
+     .item:hover{background-color: #cccccc;cursor: pointer}
+    </style>
+
+</head>
+<body>
+<div id="wa1">
+    <div id="sel">请选择</div>
+    <div id="items">
+        <div class="item" onclick="selected(this)">深圳</div>
+        <div class="item" onclick="selected(this)">北京</div>
+        <div class="item" onclick="selected(this)">上海</div>
+        <div class="item" onclick="selected(this)">广州</div>
+    </div>
+</div>
+<br>
+<!--js函数-->
+<script type="text/javascript">
+    var s = document.getElementById("sel");
+
+    s.onclick = function() {
+        var  a = document.getElementById("items");
+        a.style.display = "block";
+    }
+
+    function selected(a) {
+        //隐藏下拉
+        var d = document.getElementById("items");
+        d.style.display = "none";
+        //显示选择的值
+        var text = a.innerText;
+        document.getElementById("sel").innerText = text;
+    }
+</script>
+</body>
+</html>
+
+
+
+

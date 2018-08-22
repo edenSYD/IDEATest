@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="content-type" content="text/html">
+    <!--加载css-->
+    <link href="normalCSS.css" rel="stylesheet">
+    <title>表格</title>
+</head>
+<body>
+<center>明日员工通讯录</center>
+<!--创建表格-->
+<table border="1" cellpadding="5" cellspacing="3" align="center" bordercolor="#0099ff" bgcolor="#deb887" background="1.png">
+  <tr bgcolor="#7fffd4">
+      <!--设置表头-->
+      <th>姓名</th>
+      <th>地址</th>
+      <th>电话</th>
+      <th>电子邮件</th>
+  </tr>
+  <tr>
+      <td>李小米</td>
+      <td>长春市天府家园</td>
+      <td>1556705****</td>
+      <td>1556705****@qq.com</td>
+  </tr>
+  <tr>
+      <td>刘潇潇</td>
+      <td>长春市名居</td>
+      <td>1556705****</td>
+      <td>1556705****@qq.com</td>
+  </tr>
+</table>
+<br>
+<table border="1" bordercolor="#2ab650" cellpadding="5" cellspacing="0">
+    <caption>静夜思&nbsp;&nbsp;李白</caption>
+    <tr>
+        <td>床前明月光</td>
+        <td>疑是地上霜</td>
+    </tr>
+    <tr>
+        <td>举头望明月</td>
+        <td>低头思故乡</td>
+    </tr>
+</table>
+<table border="1" bordercolor="#ff0000" cellpadding="5" cellspacing="3">
+    <caption>我国著名诗人-李白</caption>
+    <tr height="100" valign="top">
+        <td width="30">诗名</td>
+        <td width="200">登金陵凤凰台</td>
+    </tr>
+    <tr align="right">
+        <td>内容</td>
+        <td>凤凰台上凤凰游， 凤去台空江自流。
+            吴宫花草埋幽径，晋代衣冠成古邱。
+            三台半落青山外，二水中分白鹭洲。
+            总为浮云能蔽日， 长安不见使人愁。
+        </td>
+    </tr>
+</table>
+<br>
+<!--合并单元格-->
+<table border="1" bordercolor="#333333" cellspacing="0" bgcolor="#7fffd4" cellpadding="5">
+    <tr>
+        <td colspan="3" align="center">古诗介绍</td>
+    </tr>
+    <tr align="center">
+        <td>作者</td>
+        <td>诗名</td>
+        <td>具体内容</td>
+    </tr>
+    <tr align="center">
+        <td>王维</td>
+        <td>积雨辋川庄作</td>
+        <td>积雨空林烟火迟， 蒸藜炊黍饷东灾。
+            漠漠水田飞白鹭， 阴阴夏木啭黄鹂。
+            山中习静观朝槿， 松下清斋折露葵。
+            野老与人争席罢， 海鸥何事更相疑？
+        </td>
+    </tr>
+</table>
+<br>
+<table border="1" bordercolor="#00ccff" cellspacing="0" cellpadding="5">
+    <caption align="center">某网上书店销售分类</caption>
+    <tr bgcolor="#cc99ff" align="left">
+        <td width="130">类别</td>
+        <td width="290">子类别</td>
+    </tr>
+    <tr>
+        <td rowspan="3">电脑书籍</td>
+        <td>编程类</td>
+    </tr>
+    <tr>
+        <td>图形图像类</td>
+    </tr>
+    <tr>
+        <td>数据库类</td>
+    </tr>
+    <tr>
+        <td rowspan="2">考试专区</td>
+        <td>中考高考</td>
+    </tr>
+    <tr>
+        <td>考研类</td>
+    </tr>
+</table>
+<br>
+<table border="1" bordercolor="#aaaaaa" cellpadding="0" cellspacing="0" width="300" align="left">
+    <caption align="center">期中考试成绩单</caption>
+    <tr align="center">
+        <th>姓名</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>英语</th>
+        <th>物理</th>
+        <th>化学</th>
+    </tr>
+    <tr align="center">
+        <td>张三</td>
+        <td>94</td>
+        <td>89</td>
+        <td>87</td>
+        <td bgcolor="orange">56</td>
+        <td>97</td>
+    </tr>
+    <tr align="center">
+        <td>李四</td>
+        <td>94</td>
+        <td>97</td>
+        <td bgcolor="#7fffd4">84</td>
+        <td>86</td>
+        <td>87</td>
+    </tr>
+    <tr align="center">
+        <td>王五</td>
+        <td>82</td>
+        <td>84</td>
+        <td>87</td>
+        <td>86</td>
+        <td bgcolor="#ff1493">77</td>
+    </tr>
+    <tfoot bgcolor="#00ccff" align="right" valign="middle">
+        <tr>
+            <td colspan="6">表格创建日期：2018-08-22</td>
+        </tr>
+    </tfoot>
+</table>
+<br><br>
+<table border="1" cellpadding="0" cellspacing="0" align="center" width="560" height="300">
+    <caption align="center">表格嵌套</caption>
+    <!--头部信息-->
+    <thead bgcolor="#66ffff" align="center">
+    <tr bgcolor="aqua" height="70">
+        <td width="160">网站logo</td>
+        <td width="400">网站banner</td>
+    </tr>
+    </thead>
+    <!--主体信息-->
+    <tbody>
+    <tr valign="top" height="200">
+        <td width="160" align="center">
+            <table border="1" bgcolor="#ffccff" cellpadding="5" cellspacing="0" width="135" height="180">
+                <tr>
+                    <td>页面导航</td>
+                </tr>
+                <tr>
+                    <td>页面导航</td>
+                </tr>
+                <tr>
+                    <td>页面导航</td>
+                </tr>
+                <tr>
+                    <td>页面导航</td>
+                </tr>
+                <tr>
+                    <td>页面导航</td>
+                </tr>
+            </table>
+        </td>
+        <td width="400" height="200" background="1.png">
+            <table width="380" height="160" border="1" bordercolor="#cc9933" cellspacing="2" cellpadding="5">
+                <tr>
+                    <td>网站板块</td>
+                    <td>网站板块</td>
+                </tr>
+                <tr>
+                    <td>网站板块</td>
+                    <td>网站板块</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot bgcolor="#00ccff" align="center">
+         <tr align="center">
+             <td colspan="2" height="30"><font color="#ffb6c1">版权信息</font></td>
+         </tr>
+    </tfoot>
+</table>
+</body>
+</html>
